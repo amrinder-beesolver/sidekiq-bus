@@ -9,5 +9,6 @@ namespace :queuebus do
   # Preload app files if this is Rails
   task :preload do
     require 'sidekiq'
+    Rake::Task["environment"].invoke
   end
 end
